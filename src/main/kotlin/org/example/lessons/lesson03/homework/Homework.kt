@@ -79,7 +79,7 @@ var temperature: Double = 23.5
 lateinit var details: String
 
 // 25. Регулятор скорости интернета (понижающий коэффициент, например 0.5) (приватная изменяемая переменная)
-private var controller: String = "Регулятор скорости интернета"
+private var controller: Double = 0.5
 
 // 26. Уровень освещения (публичная изменяемая переменная)
 var lightLevel: String = "Уровень освещения"
