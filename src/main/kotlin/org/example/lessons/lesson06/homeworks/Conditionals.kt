@@ -45,9 +45,9 @@ fun example4(sum: Int) {
 }
 fun example5(extension: String) {
     when (extension){
-        "txt" -> println("Текстовый документ")
-        "jpg, png" -> println("Изображение")
-        "xlsx, xls" -> println("Таблица")
+        "txt", "pdf" -> println("Текстовый документ")
+        "jpg", "png" -> println("Изображение")
+        "xlsx", "xls" -> println("Таблица")
         else -> println("Неизвестный тип")
     }
 }
