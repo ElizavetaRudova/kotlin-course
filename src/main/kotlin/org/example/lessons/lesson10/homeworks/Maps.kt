@@ -2,6 +2,7 @@ package org.example.lessons.lesson10.homeworks
 
 fun main() {
 
+    //Задачи на работу со словарём
 //Создайте пустой неизменяемый словарь, где ключи и значения - целые числа.
     val map1: Map<Int, Int> = mapOf<Int, Int>()
 
