@@ -10,28 +10,28 @@ fun main() {
     val map2 = mapOf(0.58F to 0.58, 0.36F to 0.36)
 
 //Создайте изменяемый словарь, где ключи - целые числа, а значения - строки.
-    val mutablemap3: Map<Int, String> = mutableMapOf<Int, String>()
+    val map3: MutableMap<Int, String> = mutableMapOf<Int, String>()
 
 //Имея изменяемый словарь, добавьте в него новые пары "ключ-значение".
-    val mutablemap4 = mutableMapOf("Россия" to "Москва")
-    mutablemap4["Япония"] = "Токио"
-    mutablemap4["Франция"] = "Париж"
+    val map4 = mutableMapOf("Россия" to "Москва")
+    map4["Япония"] = "Токио"
+    map4["Франция"] = "Париж"
 
 //Используя словарь из предыдущего задания, извлеките значение, используя ключ.
 // Попробуй получить значение с ключом, которого в словаре нет.
-    val capital = mutablemap4["Россия"]
+    val capital = map4["Россия"]
     println(capital)
 
 //Удалите определенный элемент из изменяемого словаря по его ключу.
-    mutablemap4.remove("Франция")
+    map4.remove("Франция")
 
 //Создайте словарь (ключи Double, значения Int) и выведи в цикле результат
 // деления ключа на значение. Не забудь обработать деление на 0
 // (в этом случае выведи слово “бесконечность”)
-    val mutablemap5 = mutableMapOf<Double, Int>()
-    mutablemap5[10.0] = 3
-    mutablemap5[5.0] = 0
-    for ((key, value) in mutablemap5) {
+    val map5 = mutableMapOf<Double, Int>()
+    map5[10.0] = 3
+    map5[5.0] = 0
+    for ((key, value) in map5) {
         if (value == 0) {
             println("бесконечность")
         } else {
@@ -40,37 +40,37 @@ fun main() {
     }
 
 //Измените значение для существующего ключа в изменяемом словаре.
-    mutablemap5[10.0] = 5
-    println(mutablemap5)
+    map5[10.0] = 5
+    println(map5)
 
 //Создайте два словаря и объедините их в третьем изменяемом словаре
 // через циклы.
     val map6 = mapOf("Кот" to "Мяу", "Собака" to "Гав")
     val map7 = mapOf("Корова" to "Му", "Лягушка" to "Ква")
-    val mutablemap6 = mutableMapOf<String, String>()
+    val map8 = mutableMapOf<String, String>()
     for ((key, value) in map6) {
-        mutablemap6[key] = value
+        map8[key] = value
     }
     for ((key, value) in map7) {
-        mutablemap6[key] = value
+        map8[key] = value
     }
-    println(mutablemap6)
+    println(map8)
 
 
 //Создайте словарь, где ключами являются строки, а значениями -
 // списки целых чисел. Добавьте несколько элементов в этот словарь.
-val mutablemap7 = mutableMapOf<String, List<Int>>()
-    mutablemap7["Оценки"] = listOf(5, 4, 3, 2)
-    println(mutablemap7)
+val map9 = mutableMapOf<String, List<Int>>()
+    map9["Оценки"] = listOf(5, 4, 3, 2)
+    println(map9)
 
 //Создай словарь, в котором ключи - это целые числа, а значения -
 // изменяемые множества строк. Добавь данные в словарь.
 // Получи значение по ключу (это должно быть множество строк) и добавь
 // в это множество ещё строку. Распечатай полученное множество.
-val mutablemap8 = mutableMapOf<Int, MutableSet<String>>()
-    mutablemap8[20] = mutableSetOf("температура")
-    mutablemap8[25] = mutableSetOf("влажность")
-    val mySet = mutablemap8[20]
+val map10 = mutableMapOf<Int, MutableSet<String>>()
+    map10[20] = mutableSetOf("температура")
+    map10[25] = mutableSetOf("влажность")
+    val mySet = map10[20]
     if (mySet != null) {
         mySet.add("давление")
     }
@@ -79,12 +79,12 @@ val mutablemap8 = mutableMapOf<Int, MutableSet<String>>()
 //Создай словарь, где ключами будут пары чисел. Через перебор найди
 // значение у которого пара будет содержать цифру 5 в качестве первого
 // или второго значения.
-val pairMap8 = mapOf(
+val map11 = mapOf(
     (1 to 3) to "Значение А",
     (5 to 8) to "Значение Б",
     (8 to 5) to "Значение В"
 )
-for ((key, value) in pairMap8) {
+for ((key, value) in map11) {
     val (first, second) = key
     if (first == 5 || second == 5) {
         println("Найдено значение: '$value' (Ключ-пара: $first и $second)")
@@ -92,34 +92,34 @@ for ((key, value) in pairMap8) {
 }
 //Задачи на подбор оптимального типа для словаря
 //Словарь библиотека: Ключи - автор книги, значения - список книг
-val mutablemap9: MutableMap<String, MutableList<String>> = mutableMapOf(
+val map12: MutableMap<String, MutableList<String>> = mutableMapOf(
     "Лев Толстой" to mutableListOf("Война и мир"),
     "Антон Чехов" to mutableListOf("Дама с собачкой", "Вишнёвый сад")
 )
 
 //Справочник растений: Ключи - типы растений (например, "Цветы", "Деревья"),
 // значения - списки названий растений
-val mutablemap10: MutableMap<String, MutableList<String>> = mutableMapOf(
+val map13: MutableMap<String, MutableList<String>> = mutableMapOf(
     "Цветы" to mutableListOf("Лилии"),
     "Деревья" to mutableListOf("Березы")
 )
 
 //Четвертьфинала: Ключи - названия спортивных команд, значения -
 // списки игроков каждой команды
-val mutablemap11: Map<String, MutableList<String>> = mapOf(
+val map14: Map<String, MutableList<String>> = mapOf(
     "Динамо" to mutableListOf("Иван Иванов", "Петр Петров"),
     "ЦСКА" to mutableListOf("Алексей Сидоров", "Сергей Васильев")
 )
 
 //Курс лечения: Ключи - даты, значения - список препаратов принимаемых
 // в дату
-val map12: Map<String, List<String>> = mapOf(
+val map15: Map<String, List<String>> = mapOf(
     "12.01.2027" to listOf("Анальгин")
 )
 
 //Словарь путешественника: Ключи - страны, значения - словари из городов
 // со списком интересных мест.
-val map13: Map<String, Map<String, List<String>>> = mapOf(
+val map16: Map<String, Map<String, List<String>>> = mapOf(
     "Россия" to mapOf(
         "Москва" to listOf("ВДНХ")
     )
