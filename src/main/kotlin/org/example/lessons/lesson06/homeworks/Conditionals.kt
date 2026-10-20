@@ -79,7 +79,7 @@ fun example7(temp: Int) {
    } else if (temp > 18) {
             println("футболка и шорты")
    } else {
-            println("Апокалипсис")
+            println("апокалипсис")
         }
     }
 private fun example8(ageRating: Int) {
