@@ -3,7 +3,6 @@ package org.example.lessons.org.example.lessons.lesson16.homeworks
 import org.example.lessons.org.example.lessons.printColored
 
 //Переопределение методов
-
 //Животные и Их Звуки
 //Базовый класс: Animal с методом makeSound().
 //Классы наследники: Dog, Cat, Bird.
