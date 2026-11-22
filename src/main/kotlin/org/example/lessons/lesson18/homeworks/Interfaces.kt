@@ -55,11 +55,11 @@ interface LightEmitting {
     fun completeLiteEmission()
 }
 
-interface SoundEmitting {
-    fun setVolume(volume: Int)
-    fun mute()
-    fun playSound(stream: InputStream)
-}
+//interface SoundEmitting {
+//    fun setVolume(volume: Int)
+//    fun mute()
+//    fun playSound(stream: InputStream)
+//}
 
 interface Programmable {
     fun programAction(action: String)
